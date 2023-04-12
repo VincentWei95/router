@@ -76,12 +76,12 @@ public class ScanUtils {
 //            System.out.println("scanClass, filepath = " + filepath + ", filename = " + filename);
 
             // 将文件路径的目录移除 path = com/example/router/TestActivity.class
-            String path = filepath.replace(filename, "");
+            String path = filepath.replace(filename + File.separator, "");
             // 如果是 windows 的路径需要做处理
             path = path.replaceAll("\\\\", "/");
 //            System.out.println("scanClass, path = " + path);
             if (shouldProcessScanClass(path)) {
-                scanClass(new FileInputStream(path));
+                scanClass(new FileInputStream(filepath));
             }
         }
     }
