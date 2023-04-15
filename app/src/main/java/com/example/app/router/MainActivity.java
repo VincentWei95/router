@@ -7,6 +7,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.app.member.TestParcelable;
+import com.example.app.member.TestSerializable;
 import com.example.router.callback.OnNavigationCallback;
 import com.example.router.core.RouteRequest;
 import com.example.router.core.Router;
@@ -63,6 +65,25 @@ public class MainActivity extends AppCompatActivity {
                                 Log.v(TAG, "onInterrupt");
                             }
                         });
+            }
+        });
+
+        findViewById(R.id.btn_autowired).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Router.request("/member/member")
+                        .putInt("age", 5)
+                        .putInt("height", 180)
+                        .putBoolean("boy", false)
+                        .putChar("ch", 'B')
+                        .putFloat("fl", 13.00f)
+                        .putDouble("dou", 13.01d)
+                        .putString("parentName", "test_parent")
+                        .putString("name", "test")
+                        .putSerializable("ser", new TestSerializable())
+                        .putParcelable("pac", new TestParcelable())
+                        .build()
+                        .navigation(MainActivity.this);
             }
         });
     }

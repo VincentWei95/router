@@ -10,6 +10,7 @@ public class RouterProcessorConst {
     public static final String GENERATE_INTERCEPTOR_GROUP_PACKAGE = "com.example.router.interceptor";
 
     public static final String METHOD_LOAD_INTO = "loadInto";
+    public static final String METHOD_INJECT = "inject";
 
     public static final String ROUTE_ROOT_CLASS_NAME = "{0}RouteRoot";
     public static final String ROUTE_ROOT_PARAMETER_NAME = "routeGroupClassMap";
@@ -20,8 +21,12 @@ public class RouterProcessorConst {
     public static final String INTERCEPTOR_GROUP_CLASS_NAME = "{0}InterceptorGroup";
     public static final String INTERCEPTOR_PARAMETER_NAME = "interceptorClassMap";
 
+    public static final String AUTOWIRED_CLASS_NAME = "{0}Autowired";
+    public static final String AUTOWIRED_PARAMETER_NAME = "target";
+
     // System interface
     public static final String TYPE_ACTIVITY = "android.app.Activity";
+    public static final String TYPE_FRAGMENT = "androidx.fragment.app.Fragment";
 
     // Custom interface
     public static final String ROUTER_PACKAGE = "com.example.router";
@@ -30,6 +35,7 @@ public class RouterProcessorConst {
     public static final String TYPE_IROUTE_GROUP = ROUTER_PACKAGE + TEMPLATE_PACKAGE + ".IRouteGroup";
     public static final String TYPE_IINTERCEPTOR_GROUP = ROUTER_PACKAGE + TEMPLATE_PACKAGE + ".IInterceptorGroup";
     public static final String TYPE_IINTERCEPTOR = ROUTER_PACKAGE + TEMPLATE_PACKAGE + ".IInterceptor";
+    public static final String TYPE_IAUTOWIRED = ROUTER_PACKAGE + TEMPLATE_PACKAGE + ".IAutowired";
 
     // Log
     static final String LOG_TAG = "RouterCompiler";

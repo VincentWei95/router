@@ -4,23 +4,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.app.router.MainActivity">
+    tools:context="com.ximalayaos.app.router.MainActivity">
 
     <Button
         android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="login"/>
+        android:text="login" />
 
     <Button
         android:id="@+id/btn_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="logout"/>
+        android:text="logout" />
 
     <Button
         android:id="@+id/btn_member"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="jump member"/>
+        android:text="jump member" />
+
+    <Button
+        android:id="@+id/btn_autowired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="autowired" />
 </LinearLayout>

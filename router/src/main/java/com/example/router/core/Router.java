@@ -14,6 +14,7 @@ public class Router {
 
     private static final RouterManager routerManager = new RouterManager();
     private static final InterceptorManager interceptorManager = new InterceptorManager();
+    private static final AutowiredManager autowiredManager = new AutowiredManager();
 
     private Router() {
     }
@@ -42,6 +43,10 @@ public class Router {
 
     private static void registerInterceptor(IInterceptorGroup interceptorGroup) {
         interceptorManager.registerInterceptor(interceptorGroup);
+    }
+
+    public static void inject(Object target) {
+        autowiredManager.inject(target);
     }
 
     public static RouteRequest.Builder request(String path) {
